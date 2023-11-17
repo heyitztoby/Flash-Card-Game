@@ -1,4 +1,4 @@
-# FlashCardGame
+# Framework and languages used
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 The programming languages used are Typescript, HTML and CSS.
