@@ -1,0 +1,378 @@
+.spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: grey;
+    color: white;
+    font-weight: 600;
+  }
+
+  .content {
+    margin: 0 10%;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(46, 46, 46);
+    height: 100%;
+    flex: 1;
+  }
+
+  .content #main {
+    width: 100%;
+  }
+
+  .content #headerContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .content #playBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    height: 500px;
+  }
+
+  .playBtn {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    border: 0;
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    font-weight: bold;
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+  }
+
+  .playBtn:hover {
+    background-color: rgb(226, 226, 226);
+  }
+
+  .playBtn:active {
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  }
+
+  .endGameBtns {
+    display:flex; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    width: 100%;
+  }
+
+  .endGameBtn {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 0;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+  }
+
+  .endGameBtn:hover {
+    background-color: rgb(226, 226, 226);
+  }
+
+  .endGameBtn:active {
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  }
+  
+
+  .homeBtn {
+    height: 50px; 
+    width: 50px;
+    cursor: pointer;
+    background-color: rgb(241, 241, 241);
+    border-radius: 15px;
+  }
+
+  .homeBtn:hover {
+    background-color: rgb(226, 226, 226);
+  }
+
+  .homeBtn:active {
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  }
+
+  .content #opContainer {
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .opLabel {
+    font-size: clamp(0.5rem, 2.5vw, 1.5rem);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
+  }
+
+  .opSelect {
+    width: 75px;
+    height: 50px;
+    text-align: center;
+    background-color: lightgrey;
+    font-size: clamp(0.5rem, 2.5vw, 1.5rem);
+    cursor: pointer;
+  }
+
+  .operator {
+    font-size: clamp(0.5rem, 2.5vw, 1.5rem);
+  }
+
+  .hsLabel {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-weight: bold;
+    color: white;
+  }
+
+  .combiFoundBtn {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+
+  .combiFoundBtn:hover {
+    background-color: rgb(226, 226, 226);
+  }
+
+  .combiFoundBtn:active {
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0 5px #666;
+  transform: translateY(2px);
+  }
+
+  .content #gameContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .countdownTime {
+    height: 100%; 
+    width: 80%; 
+    background-color: grey; 
+    position: absolute; 
+    top: 10px; 
+    opacity: 90%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: clamp(8rem, 2.5vw, 10rem);
+  }
+
+  .endGame {
+    height: 100%; 
+    width: 80%; 
+    background-color: grey; 
+    position: absolute; 
+    top: 10px; 
+    opacity: 95%;
+    font-size: clamp(4rem, 2.5vw, 5rem);
+    display: flex;
+    justify-content: center;
+  }
+
+  .content #timerContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .content #csContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .timer {
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    font-weight: bold;
+    padding: 15px;
+    color: white;
+  }
+
+  .currentScore {
+    font-size: clamp(4.5rem, 2.5vw, 6rem);
+    font-weight: bold;
+    color: white;
+    align-self: center;
+  }
+
+  .content #numDisplayContainer {
+    height: 400px;
+    width: 50%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+  }
+
+  .numDisplay {
+    font-size: clamp(4rem, 2.5vw, 5rem);
+    font-weight: bold;
+    color: rgb(226, 226, 226);
+    width: 33.33%;
+    text-align: center;
+  }
+
+  .content #answerContainer {
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .answerInput {
+    width: 70%;
+    height: 50px;
+    text-align: center;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 2px #fff;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    margin-bottom: 20px;
+  }
+
+  .submitBtn {
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 2px #fff;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    cursor: pointer;
+    background-color: rgb(241, 241, 241);
+  }
+
+  .submitBtn:hover {
+    background-color: rgb(226, 226, 226);
+  }
+
+  .submitBtn:active {
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0 5px #666;
+  transform: translateY(2px);
+  }
+  
+  .content #combiContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+    width: 100%;
+  }
+
+  .backBtnContainer {
+    display: flex; 
+    align-self: flex-start; 
+    padding-left: 30px; 
+  }
+
+  .backBtn {
+    height: 50px; 
+    width: 50px;
+    transform: rotate(180deg);
+    cursor: pointer;
+    background-color: rgb(241, 241, 241);
+    border-radius: 15px;
+  }
+
+  .backBtn:hover {
+    background-color: rgb(226, 226, 226);
+  }
+
+  .backBtn:active {
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  }
+
+  .combiLabel {
+    color: #fff;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-weight: bold;
+  }
+
+  td,
+th {
+  border: 1px solid rgb(190, 190, 190);
+  padding: 10px;
+}
+
+td {
+  text-align: center;
+}
+
+tr {
+    color: #000;
+}
+
+th[scope='col'] {
+  background-color: #696969;
+  color: #fff;
+}
+
+th[scope='row'] {
+  background-color: #d7d9f2;
+  margin-bottom: 10px;
+}
+
+caption {
+  padding: 10px;
+  caption-side: bottom;
+}
+
+table {
+  border: 2px solid rgb(200, 200, 200);
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  font-size: clamp(0.5rem, 2.5vw, 1.5rem); 
+  height: 65%;
+  width: 30%;
+}
+
+.endGameInfo {
+    display:flex; 
+    flex-direction: column; 
+    justify-content: space-evenly; 
+    align-items: center;
+}
+
+.gameTitle {
+    color: #fff; 
+    font-size: 3rem;
+    font-weight: bold; 
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    display: flex;
+    padding-top: 100px;
+}
+

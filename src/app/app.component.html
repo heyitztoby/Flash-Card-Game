@@ -1,0 +1,92 @@
+<div class="content" role="main">
+  <div id="main" *ngIf="!game && main && !combi">
+    <div id="headerContainer" >
+      <button class="combiFoundBtn" (click)="viewCombiBtnClick()">Combinations Found</button>
+      <span class="hsLabel">High Score: {{highScore}}</span>
+    </div>
+
+    <span class="gameTitle">{{title}}</span>
+
+      <div id="playBtnContainer">
+        <button class="playBtn" (click)="playBtnClick()">Play</button>
+      </div>
+
+      <div id="opContainer">
+        <span class="opLabel">Select your arithmetic operator:</span>
+        <select class="opSelect" #opSelect name="operator" (change)="onSelected(opSelect.value)">
+          <option class="operator" *ngFor="let operator of operators" [value]="operator.value" [selected]="operator.value === opSelected">{{operator.displayValue}}</option>
+        </select>
+      </div>
+      
+      
+  </div>
+
+  <div id="gameContainer" *ngIf="game && !main && !combi" >
+    <div *ngIf="countdown" class="countdownTime">{{countdownTime}}</div>
+    <div *ngIf="endGame" class="endGame">
+      <div class="endGameInfo">
+        <span style="font-weight: bold;">
+          Game Over!
+        </span>
+        <span>
+          High Score: {{highScore}}
+        </span>
+        <span>
+          Current Score: {{currentScore}}
+        </span>
+        <div class="endGameBtns">
+          <button class="endGameBtn" (click)="homeBtnClick()">Home</button>
+          <button class="endGameBtn" (click)="playBtnClick()">Play Again</button>
+        </div>
+      </div>
+    </div>
+    <div id="timerContainer">
+      <span class="timer">Time Left: {{timeLeft}}</span>
+      <span class="timer">
+        <img src="/assets/home.png" alt="image" class="homeBtn" (click)="homeBtnClick()">
+      </span>
+    </div>
+    <div id="csContainer">
+      <span class="currentScore">{{currentScore}}</span>
+    </div>
+
+    <div id="numDisplayContainer">
+      <span class="numDisplay">{{firstNum}}</span>
+      <span class="numDisplay">{{opDisplay}}</span>
+      <span class="numDisplay">{{secondNum}}</span>
+    </div>
+
+    <div id="answerContainer">
+        <input #ansInput class="answerInput" type="text" placeholder="Key your answer here..." (keyup.enter)="submitClick()" [disabled]="inputDisabled">
+        <button type="submit" (click)="submitClick()" class="submitBtn" [disabled]="inputDisabled" >Submit</button>
+    </div>
+  </div>
+
+  <div>
+    
+  </div>
+
+  <div id="combiContainer" *ngIf="!game && !main && combi">
+    <span class="backBtnContainer">
+      <img src="/assets/back_arrow.png" alt="image" class="backBtn" (click)="homeBtnClick()">
+    </span>
+    <span class="combiLabel">Combinations Found ({{combiFound}}/169)</span>
+    <table>
+      <thead>
+        <tr>
+          <th *ngFor="let first of firstArray" scope="col">
+            {{first}}
+          </th>
+        </tr>
+      </thead>
+      <th *ngFor="let second of secondArray" scope="row">
+        <tr *ngFor="let val of second">
+          {{val}}
+        </tr>
+      </th>
+    </table>
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
