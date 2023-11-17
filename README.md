@@ -14,3 +14,7 @@ The programming languages used are Typescript, HTML and CSS.
 2. If the inputbox turns green, it's the correct answer. If the inputbox turns red, it's the wrong answer.
 3. You can view combinations of numbers that you have answered by clicking on the 'Combinations Found' button, in the home page.
 4. While in game, you can return to home page by clicking on the home logo at the top right of the screen.
+
+## Location of the codes used
+1. The codes for programming logic and user interface are done in src->app folder.
+2. Logos used for the program are stored in src->assets folder.
